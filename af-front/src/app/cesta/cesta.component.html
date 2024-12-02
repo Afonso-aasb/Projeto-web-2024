@@ -1,0 +1,19 @@
+<h4>Cesta de compras</h4>
+<h5>{{mensagem}}</h5>
+<h4 *ngIf="cesta.itens.length<=0">Sua cesta esta vazia!!!</h4>
+<table border="1" *ngIf="cesta.itens.length>0">
+    <tr>
+        <td><b>nome</b></td><td><b>quantidade</b></td><td><b>valor</b></td>
+    </tr>
+    <tr *ngFor="let item of cesta.itens">
+        <td>{{item.produto.nome}}</td>
+        <td>{{item.quantidade}}</td>
+        <td>{{item.valor}} </td>
+    </tr>
+    <tr><td colspan="2">total</td>
+    <td>R${{total}}</td>
+    </tr>
+</table><br>
+<button (click)="limpar();">limpar cesta</button>
+<button (click)="continuar();">continuar</button>
+<button (click)="gravarPedido();">gravar</button>
