@@ -1,0 +1,42 @@
+<div class="inicio">
+    <div class="background-header">
+        
+    </div>
+    
+    <div class="background-text">
+        Loja de Bem Estar Nirvana<br><br><br>
+        Namastê - Bem-vindo à Loja de Bem Estar Nirvana, o seu Espaço de Relaxamento e Bem-Estar. <br>
+        Na Nirvana, acreditamos que o bem-estar é o caminho para uma vida plena e equilibrada. Nossa missão é oferecer produtos cuidadosamente selecionados que promovam relaxamento, tranquilidade e harmonia em sua rotina diária. <br>
+        Descubra uma linha completa de itens que vão desde velas aromáticas, óleos essenciais e difusores, até produtos de autocuidado que trazem conforto e serenidade. Cada detalhe foi pensado para proporcionar a você uma experiência única de paz e renovação. <br>
+        Permita-se desacelerar, cuidar de si e encontrar o equilíbrio que você merece. Na Nirvana, estamos aqui para guiar você nessa jornada de bem-estar e plenitude.
+    </div>
+</div>
+
+
+<nav>
+    <a href="./login">Login</a>
+    <a href="./cadastro">Cadastre-se</a>
+</nav>
+    
+    
+<div class="card-content h4">
+    <h4>{{mensagem}}</h4>
+</div>
+
+<h3 class="produtos" *ngIf="lista.length<=0">
+    Não existem produtos na vitrine
+</h3>
+
+<div class="card" *ngFor="let item of lista">
+    <img src="./{{item.codigo}}.jpg" alt="Produto" class="card-img">
+    <div class="card-content">
+        <h4>{{ item.nome }}</h4>
+        <p>{{ item.descritivo }}</p>
+        <span>R$ {{ item.valor }}</span>
+        <div>
+            <button (click)="verDetalhe(item)">Ver Mais</button>
+            <button *ngIf="item.quantidade > 0">Comprar</button>
+        </div>
+    </div>
+</div>
+

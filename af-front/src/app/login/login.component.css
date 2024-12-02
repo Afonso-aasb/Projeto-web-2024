@@ -1,0 +1,44 @@
+.fundo {
+    background-color: antiquewhite;
+}
+
+h2 {
+    margin: 0 0 15px 0;
+    padding-inline-end: 10px;
+    font-size: 1.4em;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+h2:hover {
+    color:#666;
+}
+
+button {
+    background-color:brown;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+button:hover {
+    background-color:rgba(165, 42, 42, 0.466);
+}
+
+a {
+    margin: 0 0 10px 0;
+    padding-inline-end: 10px;
+    font-family: 'Arial', sans-serif;
+    color: #666;
+    text-align: justify;
+}
+
+a:hover {
+    color: blue;
+}
